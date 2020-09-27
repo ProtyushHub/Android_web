@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:padding="@dimen/grid_1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/userCV"
+            android:layout_width="85dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="@dimen/chat_image_radius">
+            <ImageView
+                android:id="@+id/userIV"
+                android:src="@drawable/no_internet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center" />
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            android:padding="@dimen/grid_1">
+            <TextView
+                android:id="@+id/usernameTV"
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:text="Contact name" />
+
+            <TextView
+                android:id="@+id/userphTV"
+                style="@style/Text"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="22dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/userstatusTV"
+                android:textSize="15sp"
+                android:layout_marginTop="@dimen/grid_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Status"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:orientation="vertical"
+            android:padding="@dimen/grid_2">
+
+            <TextView
+                android:id="@+id/timeTV"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:gravity="right|center"
+                android:paddingLeft="@dimen/grid_1"
+                android:text=""
+
+                />
+            <TextView
+                android:id="@+id/hideTV"
+                style="@style/Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right|center"
+                android:paddingLeft="@dimen/grid_2"
+                android:text="time"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/tokTV"
+                android:textAlignment="center"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right|center"
+                android:text="000"
+                android:visibility="gone"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@color/transparent_grey"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ProgressBar>
+    </LinearLayout>
+
+
+</RelativeLayout>
